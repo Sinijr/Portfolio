@@ -163,6 +163,7 @@ h1{
     height: 400px;
     box-shadow: inset 3px 3px 2px 2px #2d2d2d4d;
     margin-top: 30px;
+    border-radius: 10px;
 }
 
 .work-slot{
@@ -182,11 +183,13 @@ h1{
 
 .work-text{
     padding: 5px;
+    text-align: start;
 }
 
 .work-text p{
     color: #aaacaa;
     margin-top: 5px;
+    text-align: start;
 }
 
 
@@ -198,7 +201,9 @@ h1{
 .stack-section {
     padding: 60px 20px;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 30px auto;
+    box-shadow: inset 3px 3px 2px 2px #2d2d2d4d;
+    border-radius: 10px;
 }
 
 .section-title {
@@ -284,7 +289,7 @@ form{
     font-weight: 400;
 }
 
-.contact button:hover{
+form button:hover{
     color: white;
     background: rgb(136, 135, 135);
 }
@@ -424,6 +429,7 @@ span{
 
 .footer-links {
     list-style: none;
+    text-align: start;
 }
 
 .footer-links li {
