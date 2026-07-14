@@ -125,6 +125,11 @@ nav ul li p{
     box-shadow: inset 3px 3px 2px 2px #2d2d2d4d;
 }
 
+.rotated-image {
+  /* Rotates the image 45 degrees clockwise */
+  transform: rotate(270deg); 
+}
+
 .profile-container img{
     margin-top: 50px;
     width: 300px;
