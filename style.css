@@ -89,7 +89,7 @@ nav ul li p{
     border-radius: 20px;
     border: 2px solid #1d1c1c;
     box-shadow: 2px 2px 2px #212121;
-    width: 240px;
+    width: 260px;
     justify-content: space-evenly;
     padding: 5px;
 }
@@ -147,7 +147,7 @@ nav ul li p{
 }
 
 h1{
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 
@@ -192,28 +192,87 @@ h1{
 
 
 
+/* STACK */
+
+
+.stack-section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #222;
+}
+
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.stack-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stack-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stack-card i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.stack-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.stack-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.python-icon { color: #3776AB; }
+.django-icon { color: #092E20; }
+.html-icon { color: #E34F26; }
+.css-icon { color: #1572B6; }
+.javascript-icon { color: #F7DF1E; }
+
+
 /* CONTACT */
 
-.contact{
-    width: 55%;
+form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
     margin: auto;
-    display: block;
+    margin-bottom: 6.25rem;
+}
+
+
+.contact{
+    width: 65%;
     margin-bottom: 30px;
     margin-top: 30px;
     box-shadow: inset 3px 3px 2px 2px #2d2d2d4d;
     text-align: center;
-}
+} 
 
-.contact input{
-    padding: 20px;
-    width: 600px;
-    margin-top: 20px;
-    border-radius: 2px;
-    border: 0;
-    outline: 0;
-}
-
-.contact button{
+.btn{
     display: block;
     outline: 0;
     border: 0;
@@ -234,15 +293,342 @@ h1{
     height: 200px;
     width: 600px;
     margin-top: 20px;
+    border: none;
+    outline: none;
+    display: flex;
 }
 
 
-/* FOOTER */
-footer{
-    background: #000;
-    color: white;
+form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 6.25rem;
+}
+
+.input-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 600px;
+}
+
+.input-group input{
+    width: 100%;
     padding: 20px;
-    border-end-end-radius: 10px;
-    border-end-start-radius: 10px;
-    margin-top: 100px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+}
+
+span{
+    background-color: #000000;
+    color: white;
+    width: 15%;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0.625rem;
+    border-radius: 5px 0 0px 5px;
+    text-align: center;
+    padding: 18px;
+
+}
+
+.input-group:hover span{
+    background: linear-gradient(225deg, #3e3e3e, #717271);
+    color: black;
+}
+
+
+
+
+/* FOOTER */
+
+:root {
+    --bg-dark: #000000;
+    --border-color: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #3b82f6;
+    --accent-hover: #60a5fa;
+    --transition-speed: 0.3s;
+}
+
+.portfolio-footer * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.portfolio-footer {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    padding: 4rem 2rem 2rem 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+  /* Left Column */
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+    text-align: start;
+}
+
+.footer-logo span {
+    color: var(--accent-color);
+}
+
+.footer-tagline {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 320px;
+    text-align: start;
+}
+
+  /* Center Column */
+
+.footer-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.footer-center h4,
+.footer-right h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+  /* Right Column (Socials) */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-right h4{
+    text-align: start;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--border-color);
+    color: var(--text-secondary);
+    transition: all var(--transition-speed) ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+}
+
+  /* Bottom Copyright Bar */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .footer-tagline {
+      max-width: 100%;
+    }
+
+    .portfolio-footer {
+      padding: 3rem 1.5rem 1.5rem 1.5rem;
+    }
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    /* Main Section */
+    .main {
+        width: 85%;
+        height: auto; /* Allow height to adapt to content */
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 30px;
+    }
+
+    .profile-container img {
+        margin: 0 0 20px 0; /* Center and drop right margin */
+    }
+
+    .about {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    h1 {
+        margin-top: 60px; /* Bring heading closer to content */
+    }
+
+    /* Works Section */
+    .works {
+        width: 90%;
+        height: auto; /* Adapt to wrapping cards */
+        flex-wrap: wrap; /* Let cards wrap to the next row */
+        padding: 30px 20px;
+    }
+
+    /* Stack Section */
+    .stack-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    /* Contact Form Elements */
+    form {
+        width: 90%;
+    }
+
+    .input-group,
+    #business {
+        width: 100%; /* Stretch components to match container width */
+        max-width: 500px;
+    }
+}
+
+
+/* --- MOBILE LAYOUT (768px and below) --- */
+@media (max-width: 768px) {
+    /* Navigation Adjustments */
+    nav {
+        padding: 15px 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-right: 0;
+    }
+
+    nav ul li {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .flexed-nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Main Container Adjustments */
+    .main {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .profile-container img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .about p {
+        font-size: 17px;
+    }
+
+    /* Works Section Card Adjustments */
+    .work-slot {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        padding-bottom: 15px;
+    }
+
+    .work-slot img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.5 / 1; /* Retains clean image proportion */
+    }
+
+    /* Forms */
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    span {
+        width: 100%;
+        border-radius: 5px 5px 0 0; /* Adjust borders for vertical flow */
+        padding: 12px;
+    }
+
+    .input-group input {
+        margin-top: 0;
+        border-radius: 0 0 5px 5px;
+    }
+
+    #business {
+        height: 150px;
+    }
+
+    /* Footer Bottom Layout */
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 }
