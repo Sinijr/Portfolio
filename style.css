@@ -1,12 +1,9 @@
-
 html {
-  /* Match this exactly to the total height of your sticky nav */
-  scroll-padding-top: 100px; 
-  
-  /* Optional: Makes the jump to the section smooth instead of a sudden snap */
-  scroll-behavior: smooth; 
+    scroll-padding-top: 100px;   
+    scroll-behavior: smooth; 
+    width: 100%;
+    max-width: 3000px;
 }
-
 
 *{
     margin: 0;
@@ -19,6 +16,8 @@ body{
     background-color: #181818;
     color: white;
     text-align: center;
+    width: 100%;
+    max-width: 3000px;
 }
 
 nav{    
@@ -53,6 +52,8 @@ nav ul li a{
 
 nav ul li a:hover{
     color: #545353;
+    scale: 1.05;
+    transition: 0.3s;
 }
 
 nav ul li p{
@@ -106,7 +107,6 @@ nav ul li p{
 
 .circled-nav h4:hover{
     color: #545353;
-    /* box-shadow: 1px 2px 2px #323232; */
 }
 
 
@@ -141,7 +141,11 @@ nav ul li p{
 
 .about{
     width: 400px;
-    padding-top: 30px;
+    /* padding-top: 30px; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 35px;
 }
 
 .about p{
@@ -149,10 +153,38 @@ nav ul li p{
     font-weight: 400;
     color: rgb(147, 148, 147);
     margin-top: 5px;
+    text-align: start;
+}
+
+.about button{
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    left: 0;
+}
+
+.about button:hover{
+    background-color: black;
+    scale: 1.05;
+    transition: 0.3s ease;
+}
+
+.about button:hover a{
+    color: white;
+}
+
+.about button a{
+    text-decoration: none;
+    color: black;
 }
 
 h1{
-    margin-top: 150px;
+    margin-top: 70px;
 }
 
 
@@ -234,8 +266,9 @@ h1{
 }
 
 .stack-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    scale: 1.05;
+    transition: 0.3s;
 }
 
 .stack-card i {
@@ -296,7 +329,9 @@ form{
 
 form button:hover{
     color: white;
-    background: rgb(136, 135, 135);
+    background: rgb(0, 0, 0);
+    scale: 1.05;
+    transition: 0.3s;
 }
 
 #business{
@@ -370,10 +405,10 @@ span{
 }
 
 .portfolio-footer * {
-    box-sizing: border-box;
-    margin: 0;
+    /* box-sizing: border-box; */
+    /* margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; */
 }
 
 .portfolio-footer {
@@ -384,8 +419,9 @@ span{
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 3rem;
@@ -399,10 +435,6 @@ span{
     letter-spacing: -0.025em;
     margin-bottom: 1rem;
     text-align: start;
-}
-
-.footer-logo span {
-    color: var(--accent-color);
 }
 
 .footer-tagline {
@@ -478,12 +510,13 @@ span{
     background-color: var(--accent-color);
     color: var(--text-primary);
     transform: translateY(-3px);
+    scale: 1.05;
+    transition: 0.3s ease;
 }
 
-  /* Bottom Copyright Bar */
 .footer-bottom {
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
     display: flex;
@@ -491,9 +524,10 @@ span{
     align-items: center;
     font-size: 0.875rem;
     color: var(--text-secondary);
+    /* text-align: start; */
 }
 
-  /* Responsive Design */
+  /* RESPONSIVE */
 @media (max-width: 768px) {
     .footer-container {
       grid-template-columns: 1fr;
@@ -506,6 +540,9 @@ span{
 
     .portfolio-footer {
       padding: 3rem 1.5rem 1.5rem 1.5rem;
+    }
+    .flexed-nav{
+        display: none;
     }
 }
 
@@ -636,7 +673,6 @@ span{
         height: 150px;
     }
 
-    /* Footer Bottom Layout */
     .footer-bottom {
         flex-direction: column;
         gap: 15px;
